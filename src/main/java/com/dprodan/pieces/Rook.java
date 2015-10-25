@@ -3,10 +3,11 @@ package com.dprodan.pieces;
 import com.dprodan.entities.Position;
 
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.Set;
 
 public class Rook extends Piece {
+
+    private final static String SIGN = "R";
 
     public Rook(Position position) {
         super(position);
@@ -32,6 +33,6 @@ public class Rook extends Piece {
 
     @Override
     public String toString() {
-        return "R";
+        return SIGN;
     }
 }

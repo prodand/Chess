@@ -2,7 +2,7 @@ package com.dprodan.entities;
 
 import java.util.Objects;
 
-public final class Position {
+public final class Position implements Comparable<Position> {
 
     private final int x;
     private final int y;
@@ -40,5 +40,13 @@ public final class Position {
                 "x=" + x +
                 ", y=" + y +
                 ']';
+    }
+
+    @Override
+    public int compareTo(Position o) {
+        if(getX() != o.getX()) {
+            return getX() - o.getX();
+        }
+        return getY() - o.getY();
     }
 }
